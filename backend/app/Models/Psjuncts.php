@@ -2,20 +2,25 @@
 
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Psjuncts extends Model
 {
     protected $fillable = ['pictures_id','sounds_id', 'categories_id'];    
     protected $hidden = [];
 
-    public function pictures(): HasOne
+    public function pictures(): HasMany
     {
-        return $this->hasOne(Players::class);
+        return $this->hasMany(Players::class);
     }
 
-    public function sounds(): HasOne
+    public function sounds(): HasMany
     {
-        return $this->hasOne(Categories::class);
+        return $this->hasMany(Categories::class);
+    }
+
+    public function categories(): HasMany
+    {
+        return $this->hasMany(Categories::class);
     }
 }

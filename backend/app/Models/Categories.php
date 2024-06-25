@@ -23,4 +23,9 @@ class Categories extends Model
     {
         return $this->belongsTo(Sounds::class);
     }
+
+    public function psjuncts(): BelongsTo
+    {
+        return $this->belongsTo(Psjuncts::class);
+    }
 }

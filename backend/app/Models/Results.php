@@ -3,6 +3,7 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Results extends Model
 {
@@ -14,8 +15,8 @@ class Results extends Model
         return $this->hasOne(Players::class);
     }
 
-    public function categories(): HasOne
+    public function categories(): HasMany
     {
-        return $this->hasOne(Categories::class);
+        return $this->hasMany(Categories::class);
     }
 }

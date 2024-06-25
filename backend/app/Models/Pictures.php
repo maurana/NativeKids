@@ -3,6 +3,7 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Pictures extends Model
 {
@@ -14,8 +15,8 @@ class Pictures extends Model
         return $this->hasMany(Categories::class);
     }
 
-    public function psjuncts(): BelongsTo
+    public function psjuncts(): BelongsToMany
     {
-        return $this->belongsTo(Psjuncts::class);
+        return $this->belongsToMany(Psjuncts::class);
     }
 }
