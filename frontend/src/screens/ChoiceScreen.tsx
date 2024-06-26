@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { 
     NativeBaseProvider, 
-    Text, View, Pressable,
+    View, Pressable,
     Container, HStack, Image
   } from "native-base";
 import { ChoiceScreenProp } from '../config/types';
-import { theme } from '../config/color';
+import { theme } from '../config/theme';
 
 export default function ChoiceScreen({navigation}:ChoiceScreenProp) {
     return (
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
          <View style={{flex:1, alignItems: 'center', justifyContent: 'center' }} bg={'warning.50'}>
           <Container>
           <HStack space={10} justifyContent="center">

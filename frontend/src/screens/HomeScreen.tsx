@@ -6,7 +6,7 @@ import {
     Container, HStack, Image
   } from "native-base";
 import { HomeScreenProp } from '../config/types';
-import { theme } from '../config/color';
+import { theme } from '../config/theme';
 
 export default function HomeScreen({navigation}:HomeScreenProp) {
   function handleExit() : any {
@@ -28,7 +28,7 @@ export default function HomeScreen({navigation}:HomeScreenProp) {
   }
 
     return (
-        <NativeBaseProvider>
+        <NativeBaseProvider theme={theme}>
         <View style={{flex:1, alignItems: 'center', justifyContent: 'center' }} bg={'warning.50'}>
           <Container>
           <HStack space={10} justifyContent="center">

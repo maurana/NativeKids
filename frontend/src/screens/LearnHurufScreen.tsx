@@ -7,7 +7,7 @@ import {
     HStack, Spinner, Heading, Image
   } from "native-base";
 import { host } from '../config/host';
-import { theme } from '../config/color';
+import { theme } from '../config/theme';
 
 function renderLoading(): any {
   return (
@@ -61,7 +61,7 @@ export default function LearnHurufScreen() {
   
 
     return (
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
         <SafeAreaView style={{flex: 1}}>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}} bg={'yellow.50'}>
         {

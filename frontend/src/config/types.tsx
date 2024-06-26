@@ -13,6 +13,7 @@ export type StackParamList = {
     PlayAngkaScreen: { data: any },
     PlayBuahScreen: { data: any },
     PlayHewanScreen: { data: any },
+    PlayHurufScreen: { data: any },
 }
 
 export type HomeScreenProp = NativeStackScreenProps<StackParamList, 'HomeScreen'>;
@@ -27,3 +28,4 @@ export type LearnHurufScreenProp = NativeStackScreenProps<StackParamList, 'Learn
 export type PlayAngkaScreenProp = NativeStackScreenProps<StackParamList, 'PlayAngkaScreen'>;
 export type PlayBuahScreenProp = NativeStackScreenProps<StackParamList, 'PlayBuahScreen'>;
 export type PlayHewanScreenProp = NativeStackScreenProps<StackParamList, 'PlayHewanScreen'>;
+export type PlayHurufScreenProp = NativeStackScreenProps<StackParamList, 'PlayHurufScreen'>;

@@ -14,6 +14,7 @@ import LearnHurufScreen from '../screens/LearnHurufScreen';
 import PlayAngkaScreen from '../screens/PlayAngkaScreen';
 import PlayBuahScreen from '../screens/PlayBuahScreen';
 import PlayHewanScreen from '../screens/PlayHewanScreen';
+import PlayHurufScreen from '../screens/PlayHurufScreen';
 
 const Router = createNativeStackNavigator<StackParamList>();
 
@@ -41,6 +42,7 @@ const StackNavigator = () => {
       <Router.Screen name="PlayAngkaScreen" component={PlayAngkaScreen} options={{ title: 'BERMAIN ANGKA' }}/>
       <Router.Screen name="PlayBuahScreen" component={PlayBuahScreen} options={{ title: 'BERMAIN BUAH' }}/>
       <Router.Screen name="PlayHewanScreen" component={PlayHewanScreen} options={{ title: 'BERMAIN HEWAN' }}/>
+      <Router.Screen name="PlayHurufScreen" component={PlayHurufScreen} options={{ title: 'BERMAIN HURUF' }}/>
     </Router.Navigator>
   );
 };

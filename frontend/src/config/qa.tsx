@@ -336,3 +336,116 @@ export const QA_Buah = [
         answer: "b",
     },
 ];
+
+export const QA_Huruf = [
+    {
+        id: 1,
+        question:"Kata AYAM di awali dengan huruf ?",
+        choice: [
+            {text: "M.png", val: "a"},
+            {text: "Y.png", val: "b"},
+            {text: "A.png", val: "c"},
+            {text: "B.png", val: "d"},
+        ],
+        answer: "c",
+    },
+    {
+        id: 2,
+        question:"Kata SATU di awali dengan huruf ?",
+        choice: [
+            {text: "A.png", val: "a"},
+            {text: "U.png", val: "b"},
+            {text: "T.png", val: "c"},
+            {text: "S.png", val: "d"},
+        ],
+        answer: "d",
+    },
+    {
+        id: 3,
+        question:"Kata KUCING di awali dengan huruf ?",
+        choice: [
+            {text: "U.png", val: "a"},
+            {text: "C.png", val: "b"},
+            {text: "G.png", val: "c"},
+            {text: "K.png", val: "d"},
+        ],
+        answer: "d",
+    },
+    {
+        id: 4,
+        question:"Kata Tiga di awali dengan huruf ?",
+        choice: [
+            {text: "T.png", val: "a"},
+            {text: "I.png", val: "b"},
+            {text: "G.png", val: "c"},
+            {text: "A.png", val: "d"},
+        ],
+        answer: "a",
+    },
+    {
+        id: 5,
+        question:"Kata LIMA di awali dengan huruf ?",
+        choice: [
+            {text: "M.png", val: "a"},
+            {text: "L.png", val: "b"},
+            {text: "B.png", val: "c"},
+            {text: "Z.png", val: "d"},
+        ],
+        answer: "b",
+    },
+    {
+        id: 6,
+        question:"Kata JERUK di awali dengan huruf ?",
+        choice: [
+            {text: "R.png", val: "a"},
+            {text: "K.png", val: "b"},
+            {text: "J.png", val: "c"},
+            {text: "E.png", val: "d"},
+        ],
+        answer: "c",
+    },
+    {
+        id: 7,
+        question:"Kata ANGGUR di awali dengan huruf ?",
+        choice: [
+            {text: "N.png", val: "a"},
+            {text: "R.png", val: "b"},
+            {text: "U.png", val: "c"},
+            {text: "A.png", val: "d"},
+        ],
+        answer: "d",
+    },
+    {
+        id: 8,
+        question:"Kata SINGA di awali dengan huruf ?",
+        choice: [
+            {text: "S.png", val: "a"},
+            {text: "X.png", val: "b"},
+            {text: "Y.png", val: "c"},
+            {text: "W.png", val: "d"},
+        ],
+        answer: "a",
+    },
+    {
+        id: 9,
+        question:"Kata PANDA di awali dengan huruf ?",
+        choice: [
+            {text: "P.png", val: "a"},
+            {text: "B.png", val: "b"},
+            {text: "M.png", val: "c"},
+            {text: "D.png", val: "d"},
+        ],
+        answer: "a",
+    },
+    {
+        id: 10,
+        question:"kata PISANG di awali dengan huruf ?",
+        choice: [
+            {text: "A.png", val: "a"},
+            {text: "P.png", val: "b"},
+            {text: "O.png", val: "c"},
+            {text: "L.png", val: "d"},
+        ],
+        answer: "b",
+    },
+];

@@ -8,9 +8,9 @@ import {
     Radio, Input, Button, Spinner
   } from "native-base";
 import { PlayHewanScreenProp } from '../config/types';
-import { theme } from '../config/color';
 import { QA_Hewan } from '../config/qa';
 import { host } from '../config/host';
+import { theme } from '../config/theme';
 
 async function submit(data:object) {
   try {
@@ -74,7 +74,7 @@ export default function PlayHewanScreen({route,navigation}:PlayHewanScreenProp) 
     }
 
     return (
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
         <View style={{ flex: 1}} bg={'yellow.50'}>
         <SafeAreaView>
           <ScrollView>

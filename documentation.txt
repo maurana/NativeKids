@@ -1,0 +1,51 @@
+SETUP & INSTALLATION
+
+# backend
+- install package -> composer install
+- customize database connection in .env file
+- migration database & seeding dummy data
+  -> php artisan migrate
+  -> php artisan db:seed --class=CategoriesTableSeeder
+  -> php artisan db:seed --class=PicturesTableSeeder
+  -> php artisan db:seed --class=SoundsTableSeeder
+  -> php artisan db:seed --class=PsjunctsTableSeeder
+  *if not migrate can import file sql on database.sql*
+- running server host by local IP
+  -> check ip internet > ipconfig (windows) / ifconfig (linux)
+  -> php -S [IP]:3000 -t public *example > php -S 192.168.1.4:3000 -t public
+
+# frontend
+- install package -> yarn add
+- sesuaikan API connection host backend in src/config/host.tsx
+- setting sdk.dir in local.properties
+
+~~~~~ running development via device ~~~~~
+- connect USB to computer/laptop
+- check device & change running daemon platform-tools
+  -> cd [your path]/Android/Sdk/platform-tools
+  -> ./adb devices
+  -> ./adb -s [your devices] reverse tcp:8081 tcp:8081
+  * example > ./adb -s 99bbe4137d27 reverse tcp:8081 tcp:8081
+  -> ./adb devices
+- Use USB transfer file & setup on USB Debugging, install via USB (Opsi Pengembang)
+- running mode local (mode debug)
+  -> yarn start, and install app to device via USB
+    i - run on iOS
+    a - run on Android
+    d - open Dev Menu
+    r - reload app
+  -> click (a) for run android to your device
+- running mode production (release)
+  -> yarn react-native run-android --mode release
+~~~~~ running development via device ~~~~~
+
+
+~~~~~ running production via device apk file ~~~~~
+- Bundle release file apk
+  -> yarn react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+  -> cd android & ./gradlew assembleRelease (mode release)
+  -> cd android & ./gradlew assembleDebug (mode debug)
+
+
+
+

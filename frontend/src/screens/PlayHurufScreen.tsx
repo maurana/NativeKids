@@ -7,8 +7,8 @@ import {
     Heading, FormControl,
     Radio, Input, Button, Spinner
   } from "native-base";
-import { PlayBuahScreenProp } from '../config/types';
-import { QA_Buah } from '../config/qa';
+import { PlayHurufScreenProp } from '../config/types';
+import { QA_Huruf } from '../config/qa';
 import { host } from '../config/host';
 import { theme } from '../config/theme';
 
@@ -41,8 +41,8 @@ function renderLoading(): any {
   );
 }
 
-export default function PlayBuahScreen({route,navigation}:PlayBuahScreenProp) {
-    let uri: string = host+'/data/buah/';
+export default function PlayHurufScreen({route,navigation}:PlayHurufScreenProp) {
+    let uri: string = host+'/data/huruf/';
     const [btnDisabled, setBtnDisabled] = React.useState(false);
     const [nama, setNama] = React.useState('');
     const [answer, setAnswer] = React.useState(Object);
@@ -60,7 +60,7 @@ export default function PlayBuahScreen({route,navigation}:PlayBuahScreenProp) {
       let arrB: any = [];
       setBtnDisabled(!btnDisabled);
       Object.keys(answer).forEach((el) => arrA.push(answer[el]));
-      QA_Buah.forEach((val, idx) => arrB.push(val.answer));
+      QA_Huruf.forEach((val, idx) => arrB.push(val.answer));
       for (let i = 0; i < 10; i++) {
         if (arrA[i] === arrB[i]) {
           skor = skor + 10;
@@ -92,7 +92,7 @@ export default function PlayBuahScreen({route,navigation}:PlayBuahScreenProp) {
             </Box>
             </View>
 
-          { QA_Buah.map((val: any) : any =>
+          { QA_Huruf.map((val: any) : any =>
             <Box alignItems="center" my={5} key={val.id}>
             <Box maxW={'90%'} w={'full'} rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" bg={'white'} flex={1} shadow={2}>
               <Center bg="amber.500" _text={{

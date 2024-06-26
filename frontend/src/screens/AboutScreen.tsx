@@ -1,13 +1,13 @@
+import * as React from 'react';
 import { 
     NativeBaseProvider, 
-    Text, View, Box,
-    Container, HStack
+    Text, View, Container
   } from "native-base";
-import { theme } from '../config/color';
+import { theme } from '../config/theme';
 
 export default function AboutScreen() {
     return (
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }} bg={'yellow.50'}>
           <Container>
           <Text fontWeight={900} color={'dark.200'}> TENTANG APLIKASI </Text>

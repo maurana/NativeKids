@@ -8,9 +8,9 @@ import {
     Radio, Input, Button, Spinner
   } from "native-base";
 import { PlayAngkaScreenProp } from '../config/types';
-import { theme } from '../config/color';
 import { QA_Angka } from '../config/qa';
 import { host } from '../config/host';
+import { theme } from '../config/theme';
 
 async function submit(data:object) {
     const response = await fetch(host+'/api/results/mix', {
@@ -70,7 +70,7 @@ export default function PlayAngkaScreen({route,navigation}:PlayAngkaScreenProp) 
     }
 
     return (
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
         <View style={{ flex: 1}} bg={'yellow.50'}>
         <SafeAreaView>
           <ScrollView>

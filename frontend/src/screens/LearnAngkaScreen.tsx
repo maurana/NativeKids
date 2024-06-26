@@ -1,16 +1,13 @@
 import * as React from 'react';
-import { SafeAreaView,FlatList} from 'react-native';
+import { SafeAreaView, FlatList} from 'react-native';
 import { 
     NativeBaseProvider, 
-    Text, View, Box, Container,
+    Text, View, Box,
     Pressable, Image, Center,
     HStack, Spinner, Heading
   } from "native-base";
 import { host } from '../config/host';
-import { theme } from '../config/color';
-
-const num = [0,1,2,3,4,5,6,7,8,9];
-
+import { theme } from '../config/theme';
 
 function renderLoading(): any {
   return (
@@ -61,7 +58,7 @@ export default function LearnAngkaScreen() {
     getPicturesFromApi();
   }, []);
     return (
-      <NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
         <SafeAreaView style={{flex: 1}}>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}} bg={'yellow.50'}>
         {
