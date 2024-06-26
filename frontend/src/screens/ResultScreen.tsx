@@ -8,6 +8,7 @@ import {
 import { ResultScreenProp } from '../config/types';
 import { host } from '../config/host';
 import { theme } from '../config/theme';
+import { HeaderBackButton } from '@react-navigation/elements';
 
 function renderLoading(): any {
   return (
@@ -62,8 +63,17 @@ export default function ResultScreen({route,navigation}:ResultScreenProp) {
 
   React.useEffect(function () {
     getResultsFromApi();
-    
   }, []);
+
+  const onBackPress = () => {
+    const { state } = route.params;
+    state({
+      nama: '',
+      answer: Object,
+      btnDisabled: false,
+    }); 
+    navigation.goBack();
+  };
 
     
     return (
@@ -71,6 +81,7 @@ export default function ResultScreen({route,navigation}:ResultScreenProp) {
         <SafeAreaView style={{flex: 1}}>
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}} bg={'yellow.50'}>
         <Container>
+        <HeaderBackButton onPress={onBackPress} />
           {
           loading ? renderLoading() : <View alignItems={'center'} justifyContent={'center'}><FlatList numColumns={1} data={data} renderItem={renderItem}/><View flex={1} mt={-40} h={32} w={32} alignItems={'center'} justifyContent={'center'}><Pressable onPress={() => navigation.navigate('HomeScreen')}>
           <Image source={require('../assets/kembali.png')} alt='image' size="sm" />

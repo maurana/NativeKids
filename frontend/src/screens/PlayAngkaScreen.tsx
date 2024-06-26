@@ -41,7 +41,12 @@ export default function PlayAngkaScreen({route,navigation}:PlayAngkaScreenProp) 
     const [btnDisabled, setBtnDisabled] = React.useState(false);
     const [nama, setNama] = React.useState('');
     const [answer, setAnswer] = React.useState(Object);
-    
+    const onRefreshState = (data: any) => {
+        setNama(data.nama);
+        setAnswer(data.answer);
+        setBtnDisabled(data.btnDisabled);
+    }
+
     const handleChangeNama = (text: any) => setNama(text);
     const handleChange=(key: any,value: any) => {
       const myState = answer;
@@ -65,7 +70,7 @@ export default function PlayAngkaScreen({route,navigation}:PlayAngkaScreenProp) 
       const response : any = await submit(dataSubmit);
       if (response != null || response != undefined) {
         setBtnDisabled(!btnDisabled);
-        return navigation.navigate('ResultScreen', {data: response.id});
+        return navigation.navigate('ResultScreen', {data: response.id, state: onRefreshState});
       }
     }
 

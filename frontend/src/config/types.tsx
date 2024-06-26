@@ -5,7 +5,6 @@ export type StackParamList = {
     AboutScreen: { data: any },
     ChoiceScreen: { data: any },
     MenuScreen: { data: any },
-    ResultScreen: { data: any },
     LearnAngkaScreen: { data: any },
     LearnBuahScreen: { data: any },
     LearnHewanScreen: { data: any },
@@ -14,6 +13,7 @@ export type StackParamList = {
     PlayBuahScreen: { data: any },
     PlayHewanScreen: { data: any },
     PlayHurufScreen: { data: any },
+    ResultScreen: { data: any, state: any},
 }
 
 export type HomeScreenProp = NativeStackScreenProps<StackParamList, 'HomeScreen'>;
