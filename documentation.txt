@@ -16,7 +16,7 @@ SETUP & INSTALLATION
 
 # frontend
 - install package -> yarn add
-- sesuaikan API connection host backend in src/config/host.tsx
+- customize API connection host backend in src/config/host.tsx
 - setting sdk.dir in local.properties
 
 ~~~~~ running development via device ~~~~~
