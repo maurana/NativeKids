@@ -41,11 +41,12 @@ SETUP & INSTALLATION
 
 
 ~~~~~ running production via device apk file ~~~~~
-- Bundle release file apk
+- Bundle file apk
   -> yarn react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
   -> cd android & ./gradlew assembleRelease (mode release)
   -> cd android & ./gradlew assembleDebug (mode debug)
-
+- Bundle clean
+  -> cd android & ./gradlew clean
 
 
 

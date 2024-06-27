@@ -13,7 +13,7 @@ export type StackParamList = {
     PlayBuahScreen: { data: any },
     PlayHewanScreen: { data: any },
     PlayHurufScreen: { data: any },
-    ResultScreen: { data: any, state: any},
+    ResultScreen: { data: any},
 }
 
 export type HomeScreenProp = NativeStackScreenProps<StackParamList, 'HomeScreen'>;

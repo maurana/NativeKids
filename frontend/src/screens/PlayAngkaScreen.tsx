@@ -41,11 +41,6 @@ export default function PlayAngkaScreen({route,navigation}:PlayAngkaScreenProp) 
     const [btnDisabled, setBtnDisabled] = React.useState(false);
     const [nama, setNama] = React.useState('');
     const [answer, setAnswer] = React.useState(Object);
-    const onRefreshState = (data: any) => {
-        setNama(data.nama);
-        setAnswer(data.answer);
-        setBtnDisabled(data.btnDisabled);
-    }
 
     const handleChangeNama = (text: any) => setNama(text);
     const handleChange=(key: any,value: any) => {
@@ -58,7 +53,7 @@ export default function PlayAngkaScreen({route,navigation}:PlayAngkaScreenProp) 
       let skor: number = 0;
       let arrA: any = [];
       let arrB: any = [];
-      setBtnDisabled(!btnDisabled);
+      // setBtnDisabled(!btnDisabled);
       Object.keys(answer).forEach((el) => arrA.push(answer[el]));
       QA_Angka.forEach((val, idx) => arrB.push(val.answer));
       for (let i = 0; i < 10; i++) {
@@ -69,8 +64,7 @@ export default function PlayAngkaScreen({route,navigation}:PlayAngkaScreenProp) 
       const dataSubmit = {name:nama,score:skor,categories_id:route.params.data}
       const response : any = await submit(dataSubmit);
       if (response != null || response != undefined) {
-        setBtnDisabled(!btnDisabled);
-        return navigation.navigate('ResultScreen', {data: response.id, state: onRefreshState});
+        return navigation.navigate('ResultScreen', {data: response.id});
       }
     }
 
