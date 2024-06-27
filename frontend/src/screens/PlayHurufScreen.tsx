@@ -58,7 +58,7 @@ export default function PlayHurufScreen({route,navigation}:PlayHurufScreenProp) 
       let skor: number = 0;
       let arrA: any = [];
       let arrB: any = [];
-      setBtnDisabled(!btnDisabled);
+      // setBtnDisabled(!btnDisabled);
       Object.keys(answer).forEach((el) => arrA.push(answer[el]));
       QA_Huruf.forEach((val, idx) => arrB.push(val.answer));
       for (let i = 0; i < 10; i++) {
@@ -69,7 +69,6 @@ export default function PlayHurufScreen({route,navigation}:PlayHurufScreenProp) 
       const dataSubmit = {name:nama,score:skor,categories_id:route.params.data}
       const response : any = await submit(dataSubmit);
       if (response != null || response != undefined) {
-        setBtnDisabled(!btnDisabled);
         return navigation.navigate('ResultScreen', {data: response.id});
       }
     }
